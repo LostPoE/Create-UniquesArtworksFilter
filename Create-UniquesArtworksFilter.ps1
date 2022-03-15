@@ -13,8 +13,8 @@ $ChaosValue = ($DefaultChaosValue,$ChaosValue)[[bool]$ChaosValue]
 function Create-UniqueFilter {
     [CmdletBinding()]
     param(
-		    [Parameter()]
-		    $ChaosValue,
+	    [Parameter()]
+	    $ChaosValue,
             [Parameter()]
             [string]$LeagueName
         )
