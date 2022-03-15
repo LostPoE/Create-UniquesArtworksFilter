@@ -27,14 +27,14 @@ function Create-UniqueFilter {
 		        [Parameter(Mandatory)]
 		        [string] $NinjaItem
 	            )
-                #Write-Host "Find Art name for Item:" $NinjaItem -BackgroundColor DarkGray
-                $FilteredItem =  $NinjaItem -replace " ","_" -replace "'",""
-                $POEDBURL =  "https://poedb.tw/us/$FilteredItem"
-                $ItemQueryInfo = Invoke-WebRequest -Uri $POEDBURL -UseBasicParsing
-                $ItemArt = ((((($ItemQueryInfo.RawContent) -split '\r?\n') | Where-Object {$_ -like '*art/2DItems/*'}) -split "<td>") | Where-Object {$_ -like "Art/2DItems/*"}) -replace "</td></tr><tr>",""
-                $ItemArtFilter = $ItemArt | Where-Object {$_ -notlike "Art/2DItems/Hideout*"}
-                $ItemArtFilter
-                }
+                    #Write-Host "Find Art name for Item:" $NinjaItem -BackgroundColor DarkGray
+                    $FilteredItem =  $NinjaItem -replace " ","_" -replace "'",""
+                    $POEDBURL =  "https://poedb.tw/us/$FilteredItem"
+                    $ItemQueryInfo = Invoke-WebRequest -Uri $POEDBURL -UseBasicParsing
+                    $ItemArt = ((((($ItemQueryInfo.RawContent) -split '\r?\n') | Where-Object {$_ -like '*art/2DItems/*'}) -split "<td>") | Where-Object {$_ -like "Art/2DItems/*"}) -replace "</td></tr><tr>",""
+                    $ItemArtFilter = $ItemArt | Where-Object {$_ -notlike "Art/2DItems/Hideout*"}
+                    $ItemArtFilter
+                    }
 
         #Pull Unique Item Prices from poe.ninja
         #Unique Armours
