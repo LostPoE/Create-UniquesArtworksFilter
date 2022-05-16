@@ -5,5 +5,6 @@ $DefaultChaosValue = 2 and $DefaultLeagueName = "Archnemesis". Can be easily cha
 
 You may need to run "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned" first to run PowerShell scripts on your machine.
 
-#16 May 2022
+#Updates 16 May 2022
+
 Updated for Sentinel
