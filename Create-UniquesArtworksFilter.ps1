@@ -2,7 +2,7 @@
 #Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 #Removed Replicas from items. They don't drop.
 
-$DefaultLeagueName = "Archnemesis"
+$DefaultLeagueName = "Sentinel"
 $LeagueName = Read-Host -Prompt "League Name, Spelling must be exact - Default ($DefaultLeagueName)"
 $LeagueName = ($DefaultLeagueName,$LeagueName)[[bool]$LeagueName]
 
